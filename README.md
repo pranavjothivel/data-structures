@@ -1,2 +1,3 @@
 # Data Structures
-Collection of implementation of traditional data structures in Python and Java
+
+Collection of common data structures implemented in Python and Java
