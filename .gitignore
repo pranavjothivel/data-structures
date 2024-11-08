@@ -1,0 +1,7 @@
+.DS_STORE
+*.class
+*.jar
+*.war
+*.ear
+__pycache__/
+*.pyc
