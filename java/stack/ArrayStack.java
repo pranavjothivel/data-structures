@@ -1,5 +1,3 @@
-package java.stack;
-
 import java.util.ArrayList;
 
 public class ArrayStack<E> implements StackADT<E> {
@@ -12,7 +10,7 @@ public class ArrayStack<E> implements StackADT<E> {
     }
     
     public ArrayStack(int size) {
-        stack = new ArrayList<E>(size);
+        stack = new ArrayList<>(size);
     }
 
     private void ensureCapacity() {
@@ -42,5 +40,9 @@ public class ArrayStack<E> implements StackADT<E> {
 
     public boolean isEmpty() {
         return top == -1;
+    }
+
+    public int size() {
+        return stack.size();
     }
 }

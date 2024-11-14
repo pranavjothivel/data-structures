@@ -1,8 +1,8 @@
-package java.stack;
+import java.util.EmptyStackException;
 
-public class IntegerArrayStack {
-    private int top = -1;
+public class IntegerArrayStack implements StackADT<Integer> {
     private int[] stack;
+    private int top = -1;
 
     public IntegerArrayStack() {
         this(100);
@@ -20,26 +20,27 @@ public class IntegerArrayStack {
         }
     }
 
-    public void push(int element) {
+    public void push(Integer element) {
         ensureCapacity();
-        stack[++top] = element;
+        stack[top++] = element;
     }
 
-    public int peek() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Stack is empty");
-        }
-        return stack[top];
-    }
-
-    public int pop() {
-        if (isEmpty()) {
-            throw new IllegalStateException("Stack is empty");
+    public Integer pop() {
+        if (top == -1) {
+            throw new EmptyStackException();
         }
         return stack[top--];
     }
 
+    public Integer peek() {
+        return 0;
+    }
+
     public boolean isEmpty() {
         return top == -1;
+    }
+
+    public int size() {
+        return 0;
     }
 }

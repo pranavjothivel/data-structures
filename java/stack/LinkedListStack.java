@@ -1,11 +1,10 @@
-package java.stack;
 import java.util.LinkedList;
 
 public class LinkedListStack<E> implements StackADT<E> {
-    private LinkedList<E> list;
+    private final LinkedList<E> list;
 
     public LinkedListStack() {
-        list = new LinkedList<E>();
+        list = new LinkedList<>();
     }
 
     public void push(E element) {
@@ -28,5 +27,8 @@ public class LinkedListStack<E> implements StackADT<E> {
 
     public boolean isEmpty() {
         return list.isEmpty();
+    }
+    public int size() {
+        return list.size();
     }
 }

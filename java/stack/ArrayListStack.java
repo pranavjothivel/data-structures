@@ -1,12 +1,10 @@
-package java.stack;
-
 import java.util.ArrayList;
 
 public class ArrayListStack<E> implements StackADT<E> {
-    private ArrayList<E> stack;
+    private final ArrayList<E> stack;
 
     public ArrayListStack() {
-        stack = new ArrayList<E>();
+        stack = new ArrayList<>();
     }
 
     public void push(E element) {
@@ -29,5 +27,9 @@ public class ArrayListStack<E> implements StackADT<E> {
 
     public boolean isEmpty() {
         return stack.isEmpty();
+    }
+
+    public int size() {
+        return stack.size();
     }
 }
